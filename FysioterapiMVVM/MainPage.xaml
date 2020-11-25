@@ -1,0 +1,27 @@
+﻿<Page
+    x:Class="FysioterapiMVVM.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:FysioterapiMVVM"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <ListView SelectedItem="{x:Bind ViewModel.Patienter, Mode=TwoWay}" ItemsSource="{x:Bind ViewModel.Patientinfo}" HorizontalAlignment="Left" Height="375" Margin="502,146,0,0" VerticalAlignment="Top" Width="291">
+            <ListView.ItemTemplate>
+                <DataTemplate x:DataType="local:Patient">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBox Text="{x:Bind Navn, Mode=TwoWay}"/>
+                        <TextBlock Text="{x:Bind Cprnr, Mode=TwoWay}"/>
+                        <TextBlock Text="{x:Bind Tlfnr, Mode=TwoWay}"/>
+                        <TextBlock Text="{x:Bind Sygdom, Mode=TwoWay}"/>
+                        <TextBlock Text="{x:Bind Adresse, Mode=TwoWay}"/>
+                        <TextBlock Text="{x:Bind Email, Mode=TwoWay}"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
+</Page>
