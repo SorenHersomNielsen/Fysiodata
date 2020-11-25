@@ -29,16 +29,16 @@ namespace FysioterapiMVVM
         public Patient Patienter { get; set; }
 
         // Vores Observablecollection tager udgangspunkt i vores patienter
-        public ObservableCollection<Patient1> Patientinfo { get; set; }
+        public ObservableCollection<Patient> Patientinfo { get; set; }
         public Viewmodel()
         {
-            Patientinfo = new ObservableCollection<Patient1>();
+            Patientinfo = new ObservableCollection<Patient>();
             // testdata           
             Patientinfo.Add(new Patient("Søren", 1209101789, 31343638,
                 "ryg gigt", "2860 Soeborg, Fredehuseborgvej 34", "AvForSoeren@yahoo.com"));
             Patientinfo.Add(new Patient("Jens Peter", 0907381715, 31313131,
                 "mødestabil", "4700 Næstved, Brogade 83", "Jenspeter@blackhat.now"));
-            Patienter = new Patient1();
+            Patienter = new Patient();
         }
     }
 }
