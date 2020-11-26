@@ -19,6 +19,10 @@ namespace FysioterapiMVVM
         private string patientadresse;
         private string patientemail;
 
+
+        /// <summary>
+        /// Det sammen URL blive brugt under hele projektet
+        /// </summary>
         const string URL = "http://localhost:60928/";
 
 
@@ -31,9 +35,10 @@ namespace FysioterapiMVVM
         public string PatientSygdom { get => patientsygdom; set => patientsygdom = value; }
         public string PatientAdresse { get => patientadresse; set => patientadresse = value; }
         public string PatientEmail { get => patientemail; set => patientemail = value; }
+        
         public Patient Patienter { get; set; }
 
-        public RelayCommand Tilføjepatient { get; set; }
+        public RelayCommand Tilfojepatient { get; set; }
         public RelayCommand SletValgtPatient {get; set;}
 
 
@@ -47,9 +52,11 @@ namespace FysioterapiMVVM
                 "ryg gigt", "2860 Soeborg, Fredehuseborgvej 34", "AvForSoeren@yahoo.com"));
             Patientinfo.Add(new Patient("Jens Peter", 0907381715, 31313131,
                 "mødestabil", "4700 Næstved, Brogade 83", "Jenspeter@blackhat.now"));
+            
             Patienter = new Patient();
 
-            Tilføjepatient = new RelayCommand(Opretpatient); 
+            Tilfojepatient = new RelayCommand(Opretpatient);
+            SletValgtPatient = new RelayCommand(SletPatient);
         }
 
 
@@ -68,36 +75,44 @@ namespace FysioterapiMVVM
 
             using (var client = new HttpClient(handler))
             {
-                //Initialize client
+                //Initialiser klienten
                 client.BaseAddress = new Uri(URL);
                 client.DefaultRequestHeaders.Clear();
 
-                //Request JSON format
+                //Laver en forespøgelse om at få en JSON format
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
                 try
                 {
 
-                    //Get all the flower orders from the database
+                    // Den får alle patienter fra databasen
                     var PatientResponse = client.PostAsJsonAsync<Patient>("api/Patientstabels", patient).Result;
 
-                    //Check response -> throw exception if NOT successful
+                    //Tjekker svar fra databasen, hvis det går galt kaster den en exception
                     PatientResponse.EnsureSuccessStatusCode();
 
-                    //Get the hotels as a ICollection
-                    var flowerOrder = PatientResponse.Content.ReadAsAsync<Patient>().Result;
-
-                    Tilføjepatient.RaiseCanExecuteChanged();
+                    //Får patient som en ICollection
+                    var patient1 = PatientResponse.Content.ReadAsAsync<Patient>().Result;
+                    
+                    // Tjekker om patient kan oprettes
+                    Tilfojepatient.RaiseCanExecuteChanged();
                 }
                 catch
                 {
 
                 }
-
-
             }
+        }
 
+        /// <summary>
+        /// Metorden sletter patient fra vores observablecollection
+        /// </summary>
+        public void SletPatient()
+        {
+            Patientinfo.Remove(Patienter);
 
+            // Tjekker om patient kan slettes
+            SletValgtPatient.RaiseCanExecuteChanged();
         }
     }
 }

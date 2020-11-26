@@ -29,7 +29,7 @@
         <TextBox HorizontalAlignment="Left" Margin="120,578,0,0" Description="Patients adresse" Text="{x:Bind Path=ViewModel.PatientAdresse, Mode=TwoWay}" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.535,1.339"/>
         <TextBox HorizontalAlignment="Left" Margin="342,578,0,0" Description="Patients dianose" Text="{x:Bind Path=ViewModel.PatientSygdom, Mode=TwoWay}" TextWrapping="Wrap" VerticalAlignment="Top"/>
         <TextBox HorizontalAlignment="Left" Margin="244,578,0,0" Description="Patients email" Text="{x:Bind Path=ViewModel.PatientEmail, Mode=TwoWay}" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <Button Command="{x:Bind ViewModel.Tilføjepatient,Mode=OneWay}" Content="Tilføj patient" Height="47" Margin="115,683,0,0" VerticalAlignment="Top" Width="110"/>
-
+        <Button Command="{x:Bind ViewModel.Tilfojepatient,Mode=OneWay}" Content="Tilføj patient" Height="47" Margin="115,683,0,0" VerticalAlignment="Top" Width="110"/>
+        <Button Command="{x:Bind ViewModel.SletValgtPatient,Mode=OneWay}" Content="Slet patient" Height="47" Margin="310,678,0,0" VerticalAlignment="Top" Width="110"/>
     </Grid>
 </Page>
