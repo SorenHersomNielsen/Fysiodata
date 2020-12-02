@@ -48,3 +48,8 @@ C:\Users\herso\OneDrive\Skrivebord\FysiodataAPI\FysioterapiMVVM\bin\x86\Debug\Ne
 C:\Users\herso\OneDrive\Skrivebord\FysiodataAPI\FysioterapiMVVM\bin\x86\Debug\Newtonsoft.Json.Bson.dll
 C:\Users\herso\OneDrive\Skrivebord\FysiodataAPI\FysioterapiMVVM\obj\x86\Debug\System.Net.Http.Formatting\en-US\System.Net.Http.Properties.CommonWebApiResources.resw
 C:\Users\herso\OneDrive\Skrivebord\FysiodataAPI\FysioterapiMVVM\obj\x86\Debug\System.Net.Http.Formatting\en-US\System.Net.Http.Properties.Resources.resw
+C:\Users\herso\OneDrive\Skrivebord\FysiodataAPI\FysioterapiMVVM\bin\x86\Debug\Patientside.xbf
+C:\Users\herso\OneDrive\Skrivebord\FysiodataAPI\FysioterapiMVVM\obj\x86\Debug\Patientside.g.i.cs
+C:\Users\herso\OneDrive\Skrivebord\FysiodataAPI\FysioterapiMVVM\obj\x86\Debug\Patientside.g.cs
+C:\Users\herso\OneDrive\Skrivebord\FysiodataAPI\FysioterapiMVVM\obj\x86\Debug\Patientside.xaml
+C:\Users\herso\OneDrive\Skrivebord\FysiodataAPI\FysioterapiMVVM\obj\x86\Debug\Patientside.xbf

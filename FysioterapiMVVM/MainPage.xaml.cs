@@ -28,5 +28,9 @@ namespace FysioterapiMVVM
             this.InitializeComponent();
             ViewModel = new Viewmodel();
         }
+        private void VisPatientside(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Patientside));
+        }
     }
 }

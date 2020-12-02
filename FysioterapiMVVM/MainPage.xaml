@@ -4,32 +4,18 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:local="using:FysioterapiMVVM"
+    xmlns:local="using:FysioterapiMVVM" 
+    xmlns:muxc="using:Windows.UI.Xaml.Controls"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <ListView SelectedItem="{x:Bind ViewModel.Patienter, Mode=TwoWay}" ItemsSource="{x:Bind ViewModel.Patientinfo}" HorizontalAlignment="Left" Height="730" Margin="448,52,0,0" VerticalAlignment="Top" Width="1042">
-            <ListView.ItemTemplate>
-                <DataTemplate x:DataType="local:Patient">
-                    <StackPanel Orientation="Horizontal">
-                        <TextBox Text="{x:Bind Navn, Mode=TwoWay}"/>
-                        <TextBlock Text="{x:Bind Cprnr, Mode=TwoWay}"/>
-                        <TextBlock Text="{x:Bind Tlfnr, Mode=TwoWay}"/>
-                        <TextBlock Text="{x:Bind Sygdom, Mode=TwoWay}"/>
-                        <TextBlock Text="{x:Bind Adresse, Mode=TwoWay}"/>
-                        <TextBlock Text="{x:Bind Email, Mode=TwoWay}"/>
-                    </StackPanel>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
-        <TextBox HorizontalAlignment="Left" Margin="120,500,0,0" Description="Patients navn" Text="{x:Bind Path=ViewModel.PatientNavn, Mode=TwoWay}" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Margin="229,500,0,0" Description="Patients CPRnr." Text="{x:Bind Path=ViewModel.PatientCprnr, Mode=TwoWay}" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Margin="339,500,0,0" Description="Patients tlfnr." Text="{x:Bind Path=ViewModel.PatientTlfnr, Mode=TwoWay}" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Margin="120,578,0,0" Description="Patients adresse" Text="{x:Bind Path=ViewModel.PatientAdresse, Mode=TwoWay}" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.535,1.339"/>
-        <TextBox HorizontalAlignment="Left" Margin="342,578,0,0" Description="Patients dianose" Text="{x:Bind Path=ViewModel.PatientSygdom, Mode=TwoWay}" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Margin="244,578,0,0" Description="Patients email" Text="{x:Bind Path=ViewModel.PatientEmail, Mode=TwoWay}" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <Button Command="{x:Bind ViewModel.Tilfojepatient,Mode=OneWay}" Content="Tilføj patient" Height="47" Margin="115,683,0,0" VerticalAlignment="Top" Width="110"/>
-        <Button Command="{x:Bind ViewModel.SletValgtPatient,Mode=OneWay}" Content="Slet patient" Height="47" Margin="310,678,0,0" VerticalAlignment="Top" Width="110"/>
+        <muxc:MenuBar Margin="0,0,0,960">
+            <muxc:MenuBarItem Title="File">
+                <MenuFlyoutItem Text="Forside"/>
+                <MenuFlyoutItem Text="Patient" Click="VisPatientside"/>
+                <MenuFlyoutItem Text="Medarbejde" />
+            </muxc:MenuBarItem>
+        </muxc:MenuBar>
     </Grid>
 </Page>

@@ -82,6 +82,9 @@
     <AppxPackagedFile Include="C:\Users\herso\OneDrive\Skrivebord\FysiodataAPI\FysioterapiMVVM\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\herso\OneDrive\Skrivebord\FysiodataAPI\FysioterapiMVVM\bin\x86\Debug\Patientside.xbf">
+      <PackagePath>Patientside.xbf</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.18362.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
     </AppxPackagedFile>

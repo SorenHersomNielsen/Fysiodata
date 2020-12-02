@@ -32,6 +32,10 @@ namespace FysiodataAPI
             modelBuilder.Entity<Patientstabel>()
                 .Property(e => e.nedsatteevne)
                 .IsUnicode(false);
+
+            modelBuilder.Entity<Patientstabel>()
+                .Property(e => e.Noter)
+                .IsUnicode(false);
         }
     }
 }

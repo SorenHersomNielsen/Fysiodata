@@ -15,6 +15,7 @@ namespace FysioterapiMVVM
         private string sygdom;
         private string adresse;
         private string email;
+        private string noter;
 
         // Alt dette her er properties kan ses på kendetegnet (get; set;)
         public string Navn { get { return navn; } set { navn = value; } }
@@ -23,6 +24,7 @@ namespace FysioterapiMVVM
         public string Sygdom { get { return sygdom; } set { sygdom = value; } }
         public string Adresse { get { return adresse; } set { adresse = value; } }
         public string Email { get { return email; } set { email = value; } }
+        public string Noter { get { return noter; } set { noter = value; } }
 
         // kravene i parameteren skal opfyldes for at kunne oprette en patient kan ses nedenunder.
         public Patient(string Navn, int Cprnr, int Tlfnr, string Sygdom, string Adresse, string Email)
@@ -33,12 +35,18 @@ namespace FysioterapiMVVM
             this.sygdom = Sygdom;
             this.adresse = Adresse;
             this.email = Email;
-
-
         }
+
+        public Patient(string Noter)
+        {
+            this.noter = Noter;
+        }
+
         public Patient()
         {
 
         }
+
+
     }
 }

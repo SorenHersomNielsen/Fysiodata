@@ -18,6 +18,7 @@ namespace FysioterapiMVVM
         private string patientsygdom;
         private string patientadresse;
         private string patientemail;
+        private string PatientNoter;
 
 
         /// <summary>
@@ -35,11 +36,13 @@ namespace FysioterapiMVVM
         public string PatientSygdom { get => patientsygdom; set => patientsygdom = value; }
         public string PatientAdresse { get => patientadresse; set => patientadresse = value; }
         public string PatientEmail { get => patientemail; set => patientemail = value; }
-        
+        public string PatietNoter { get => PatientNoter; set => PatientNoter = value; }
+
         public Patient Patienter { get; set; }
 
         public RelayCommand Tilfojepatient { get; set; }
         public RelayCommand SletValgtPatient {get; set;}
+        public RelayCommand Noterompatient { get; set; }
 
 
         // Vores Observablecollection tager udgangspunkt i vores patienter
@@ -57,6 +60,7 @@ namespace FysioterapiMVVM
 
             Tilfojepatient = new RelayCommand(Opretpatient);
             SletValgtPatient = new RelayCommand(SletPatient);
+            Noterompatient = new RelayCommand(NoterPatient);
         }
 
 
@@ -75,6 +79,7 @@ namespace FysioterapiMVVM
 
             using (var client = new HttpClient(handler))
             {
+
                 //Initialiser klienten
                 client.BaseAddress = new Uri(URL);
                 client.DefaultRequestHeaders.Clear();
@@ -85,14 +90,15 @@ namespace FysioterapiMVVM
                 try
                 {
 
+                    test patient2 = new test() { Navn = patientnavn, adresse = PatientAdresse, Cprnr = patientcprnr, email = PatientEmail, nedsatteevne = patientsygdom }; 
                     // Den får alle patienter fra databasen
-                    var PatientResponse = client.PostAsJsonAsync<Patient>("api/Patientstabels", patient).Result;
+                    var PatientResponse = client.PostAsJsonAsync<test>("api/Patientstabels", patient2).Result;
 
                     //Tjekker svar fra databasen, hvis det går galt kaster den en exception
                     PatientResponse.EnsureSuccessStatusCode();
 
                     //Får patient som en ICollection
-                    var patient1 = PatientResponse.Content.ReadAsAsync<Patient>().Result;
+                    var patient1 = PatientResponse.Content.ReadAsAsync<test>().Result;
                     
                     // Tjekker om patient kan oprettes
                     Tilfojepatient.RaiseCanExecuteChanged();
@@ -114,5 +120,44 @@ namespace FysioterapiMVVM
             // Tjekker om patient kan slettes
             SletValgtPatient.RaiseCanExecuteChanged();
         }
+
+        public void NoterPatient()
+        {
+            Patient notar = new Patient(PatientNoter);
+            
+            HttpClientHandler handler = new HttpClientHandler();
+            handler.UseDefaultCredentials = true;
+
+            using (var client = new HttpClient(handler))
+            {
+                //Initialiser klienten
+                client.BaseAddress = new Uri(URL);
+                client.DefaultRequestHeaders.Clear();
+
+                //Laver en forespøgelse om at få en JSON format
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+                try
+                {
+
+                    // Den får alle patienter fra databasen
+                    var PatientResponse = client.PostAsJsonAsync<Patient>("api/Patientstabels", notar).Result;
+
+                    //Tjekker svar fra databasen, hvis det går galt kaster den en exception
+                    PatientResponse.EnsureSuccessStatusCode();
+
+                    //Får patient som en ICollection
+                    var patient1 = PatientResponse.Content.ReadAsAsync<Patient>().Result;
+
+                    // Tjekker om patient kan oprettes
+                    Tilfojepatient.RaiseCanExecuteChanged();
+                }
+                catch
+                {
+
+                }
+            }
+        }
+
     }
 }
