@@ -12,7 +12,7 @@ namespace FysioterapiMVVM
         private string navn;
         private int cprnr;
         private int tlfnr;
-        private string sygdom;
+        private string nedsatteevne;
         private string adresse;
         private string email;
         private string noter;
@@ -21,18 +21,18 @@ namespace FysioterapiMVVM
         public string Navn { get { return navn; } set { navn = value; } }
         public int Cprnr { get { return cprnr; } set { cprnr = value; } }
         public int Tlfnr { get { return tlfnr; } set { tlfnr = value; } }
-        public string Sygdom { get { return sygdom; } set { sygdom = value; } }
+        public string Nedsatteevne { get { return nedsatteevne; } set { nedsatteevne = value; } }
         public string Adresse { get { return adresse; } set { adresse = value; } }
         public string Email { get { return email; } set { email = value; } }
         public string Noter { get { return noter; } set { noter = value; } }
 
         // kravene i parameteren skal opfyldes for at kunne oprette en patient kan ses nedenunder.
-        public Patient(string Navn, int Cprnr, int Tlfnr, string Sygdom, string Adresse, string Email)
+        public Patient(string Navn, int Cprnr, int Tlfnr, string Nedsatteevne, string Adresse, string Email)
         {
             this.navn = Navn;
             this.cprnr = Cprnr;
             this.tlfnr = Tlfnr;
-            this.sygdom = Sygdom;
+            this.nedsatteevne = Nedsatteevne;
             this.adresse = Adresse;
             this.email = Email;
         }

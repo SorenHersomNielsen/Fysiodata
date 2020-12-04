@@ -20,7 +20,7 @@
                         <TextBlock Text="{x:Bind Navn, Mode=TwoWay}"/>
                         <TextBlock Text="{x:Bind Cprnr, Mode=TwoWay}"/>
                         <TextBlock Text="{x:Bind Tlfnr, Mode=TwoWay}"/>
-                        <TextBlock Text="{x:Bind Sygdom, Mode=TwoWay}"/>
+                        <TextBlock Text="{x:Bind Nedsatteevne, Mode=TwoWay}"/>
                         <TextBlock Text="{x:Bind Adresse, Mode=TwoWay}"/>
                         <TextBlock Text="{x:Bind Email, Mode=TwoWay}"/>
                     </StackPanel>

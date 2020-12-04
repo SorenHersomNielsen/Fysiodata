@@ -20,7 +20,7 @@
                         <TextBlock x:ConnectionId='14'                                  />
                         <TextBlock x:ConnectionId='15'                                   />
                         <TextBlock x:ConnectionId='16'                                   />
-                        <TextBlock x:ConnectionId='17'                                    />
+                        <TextBlock x:ConnectionId='17'                                          />
                         <TextBlock x:ConnectionId='18'                                     />
                         <TextBlock x:ConnectionId='19'                                   />
                     </StackPanel>
