@@ -27,12 +27,12 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        <TextBox HorizontalAlignment="Left" Margin="57,392,0,0" Description="Patients navn" Text="{x:Bind Path=ViewModel.PatientNavn, Mode=TwoWay}" TextWrapping="Wrap" VerticalAlignment="Top" Height="58" Width="274"/>
-        <TextBox HorizontalAlignment="Left" Margin="57,468,0,0" Description="Patients CPRnr." Text="{x:Bind Path=ViewModel.PatientCprnr, Mode=TwoWay}" TextWrapping="Wrap" VerticalAlignment="Top" Height="58" Width="274"/>
-        <TextBox HorizontalAlignment="Left" Margin="57,544,0,0" Description="Patients tlfnr." Text="{x:Bind Path=ViewModel.PatientTlfnr, Mode=TwoWay}" TextWrapping="Wrap" VerticalAlignment="Top" Height="58" Width="274"/>
-        <TextBox HorizontalAlignment="Left" Margin="57,620,0,0" Description="Patients adresse" Text="{x:Bind Path=ViewModel.PatientAdresse, Mode=TwoWay}" TextWrapping="Wrap" VerticalAlignment="Top" Height="58" Width="274"/>
+        <TextBox HorizontalAlignment="Left" Margin="57,392,0,0" Description="Patients navn" Text="{x:Bind Path=ViewModel.Navn, Mode=TwoWay}" TextWrapping="Wrap" VerticalAlignment="Top" Height="58" Width="274"/>
+        <TextBox HorizontalAlignment="Left" Margin="57,468,0,0" Description="Patients CPRnr." Text="{x:Bind Path=ViewModel.Cprnr, Mode=TwoWay}" TextWrapping="Wrap" VerticalAlignment="Top" Height="58" Width="274"/>
+        <TextBox HorizontalAlignment="Left" Margin="57,544,0,0" Description="Patients tlfnr." Text="{x:Bind Path=ViewModel.Tlfnr, Mode=TwoWay}" TextWrapping="Wrap" VerticalAlignment="Top" Height="58" Width="274"/>
+        <TextBox HorizontalAlignment="Left" Margin="57,620,0,0" Description="Patients adresse" Text="{x:Bind Path=ViewModel.Adresse, Mode=TwoWay}" TextWrapping="Wrap" VerticalAlignment="Top" Height="58" Width="274"/>
         <TextBox HorizontalAlignment="Left" Margin="57,696,0,0" Description="Patients dianose" Text="{x:Bind Path=ViewModel.PatientNedsatteevne, Mode=TwoWay}" TextWrapping="Wrap" VerticalAlignment="Top" Height="58" Width="274"/>
-        <TextBox HorizontalAlignment="Left" Margin="57,772,0,0" Description="Patients email" Text="{x:Bind Path=ViewModel.PatientEmail, Mode=TwoWay}" TextWrapping="Wrap" VerticalAlignment="Top" Height="58" Width="274"/>
+        <TextBox HorizontalAlignment="Left" Margin="57,772,0,0" Description="Patients email" Text="{x:Bind Path=ViewModel.Email, Mode=TwoWay}" TextWrapping="Wrap" VerticalAlignment="Top" Height="58" Width="274"/>
         <TextBox HorizontalAlignment="Left" Margin="543,819,0,0" Description="Noter om Patieten" Text="{x:Bind Path=ViewModel.PatietNoter, Mode=TwoWay}" TextWrapping="Wrap" VerticalAlignment="Top" Height="58"/>
         <Button Command="{x:Bind ViewModel.Tilfojepatient,Mode=OneWay}" Content="Tilføj patient" Height="47" Margin="57,853,0,0" VerticalAlignment="Top" Width="110"/>
         <Button Command="{x:Bind ViewModel.SletValgtPatient,Mode=OneWay}" Content="Slet patient" Height="47" Margin="221,853,0,0" VerticalAlignment="Top" Width="110"/>

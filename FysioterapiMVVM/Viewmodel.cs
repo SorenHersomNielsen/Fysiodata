@@ -13,12 +13,12 @@ namespace FysioterapiMVVM
     public class Viewmodel
     {
         //Instancefield
-        private string patientnavn;
-        private int patientcprnr;
-        private int patienttlfnr;
+        private string navn;
+        private int cprnr;
+        private int tlfnr;
         private string patientnedsatteevne;
-        private string patientadresse;
-        private string patientemail;
+        private string adresse;
+        private string email;
         private string PatientNoter;
 
 
@@ -30,12 +30,12 @@ namespace FysioterapiMVVM
         // Alt dette her er properties kan ses på kendetegnet (get; set;)
         //properties
         // get og set som bære => betyder nøjagtig det samme som return.
-        public string PatientNavn { get => patientnavn; set => patientnavn = value; }
-        public int PatientCprnr { get => patientcprnr; set => patientcprnr = value; }
-        public int PatientTlfnr { get => patienttlfnr; set => patienttlfnr = value; }
+        public string Navn { get => navn; set => navn = value; }
+        public int Cprnr { get => cprnr; set => cprnr = value; }
+        public int Tlfnr { get => tlfnr; set => tlfnr = value; }
         public string PatientNedsatteevne { get => patientnedsatteevne; set => patientnedsatteevne = value; }
-        public string PatientAdresse { get => patientadresse; set => patientadresse = value; }
-        public string PatientEmail { get => patientemail; set => patientemail = value; }
+        public string Adresse { get => adresse; set => adresse = value; }
+        public string Email { get => email; set => email = value; }
         public string PatietNoter { get => PatientNoter; set => PatientNoter = value; }
 
         public Patient Patienter { get; set; }
@@ -70,7 +70,7 @@ namespace FysioterapiMVVM
 
         public void Opretpatient()
         {
-            Patient patient = new Patient(PatientNavn, PatientCprnr, PatientTlfnr, PatientNedsatteevne, PatientAdresse, PatientEmail);
+            Patient patient = new Patient(Navn, Cprnr, Tlfnr, PatientNedsatteevne, Adresse, Email);
             Patientinfo.Add(patient);
 
 
