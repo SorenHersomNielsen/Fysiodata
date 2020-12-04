@@ -31,7 +31,7 @@ namespace FysiodataAPI
         [StringLength(500)]
         public string nedsatteevne { get; set; }
 
-        [Required]
+        
         [StringLength(500)]
         public string Noter { get; set; }
     }

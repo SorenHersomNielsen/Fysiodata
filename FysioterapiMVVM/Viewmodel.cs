@@ -24,9 +24,8 @@ namespace FysioterapiMVVM
         /// <summary>
         /// Det sammen URL blive brugt under hele projektet
         /// </summary>
-        const string URL = "http://localhost:60928/";
-
-
+        const string URL = "http://localhost:60928";
+        private const string RequestUri = "api/Patientstabel";
         // Alt dette her er properties kan ses på kendetegnet (get; set;)
         //properties
         // get og set som bære => betyder nøjagtig det samme som return.
@@ -90,16 +89,15 @@ namespace FysioterapiMVVM
                 try
                 {
 
-                    test patient2 = new test() { Navn = patientnavn, adresse = PatientAdresse, Cprnr = patientcprnr, email = PatientEmail, nedsatteevne = patientsygdom }; 
                     // Den får alle patienter fra databasen
-                    var PatientResponse = client.PostAsJsonAsync<test>("api/Patientstabels", patient2).Result;
+                    var PatientResponse = client.PostAsJsonAsync<Patient>(RequestUri, patient).Result;
 
                     //Tjekker svar fra databasen, hvis det går galt kaster den en exception
                     PatientResponse.EnsureSuccessStatusCode();
 
                     //Får patient som en ICollection
-                    var patient1 = PatientResponse.Content.ReadAsAsync<test>().Result;
-                    
+                    var patient1 = PatientResponse.Content.ReadAsAsync<Patient>().Result;
+
                     // Tjekker om patient kan oprettes
                     Tilfojepatient.RaiseCanExecuteChanged();
                 }
