@@ -6,6 +6,7 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 
 namespace FysioterapiMVVM
 {
@@ -15,7 +16,7 @@ namespace FysioterapiMVVM
         private string patientnavn;
         private int patientcprnr;
         private int patienttlfnr;
-        private string patientsygdom;
+        private string patientnedsatteevne;
         private string patientadresse;
         private string patientemail;
         private string PatientNoter;
@@ -25,14 +26,14 @@ namespace FysioterapiMVVM
         /// Det sammen URL blive brugt under hele projektet
         /// </summary>
         const string URL = "http://localhost:60928";
-        private const string RequestUri = "api/Patientstabel";
+        private const string RequestUri = "api/Patientstabels";
         // Alt dette her er properties kan ses på kendetegnet (get; set;)
         //properties
         // get og set som bære => betyder nøjagtig det samme som return.
         public string PatientNavn { get => patientnavn; set => patientnavn = value; }
         public int PatientCprnr { get => patientcprnr; set => patientcprnr = value; }
         public int PatientTlfnr { get => patienttlfnr; set => patienttlfnr = value; }
-        public string PatientSygdom { get => patientsygdom; set => patientsygdom = value; }
+        public string PatientNedsatteevne { get => patientnedsatteevne; set => patientnedsatteevne = value; }
         public string PatientAdresse { get => patientadresse; set => patientadresse = value; }
         public string PatientEmail { get => patientemail; set => patientemail = value; }
         public string PatietNoter { get => PatientNoter; set => PatientNoter = value; }
@@ -69,7 +70,7 @@ namespace FysioterapiMVVM
 
         public void Opretpatient()
         {
-            Patient patient = new Patient(PatientNavn, PatientCprnr, PatientTlfnr, PatientSygdom, PatientAdresse, PatientEmail);
+            Patient patient = new Patient(PatientNavn, PatientCprnr, PatientTlfnr, PatientNedsatteevne, PatientAdresse, PatientEmail);
             Patientinfo.Add(patient);
 
 
