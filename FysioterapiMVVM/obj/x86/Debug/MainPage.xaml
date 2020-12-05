@@ -14,7 +14,7 @@
             <muxc:MenuBarItem Title="File">
                 <MenuFlyoutItem Text="Forside"/>
                 <MenuFlyoutItem x:ConnectionId='2' Text="Patient"                       />
-                <MenuFlyoutItem Text="Medarbejde" />
+                <MenuFlyoutItem x:ConnectionId='3' Text="Medarbejde"                           />
             </muxc:MenuBarItem>
         </muxc:MenuBar>
     </Grid>

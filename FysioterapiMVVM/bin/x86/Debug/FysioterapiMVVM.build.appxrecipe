@@ -82,6 +82,9 @@
     <AppxPackagedFile Include="C:\Users\herso\OneDrive\Skrivebord\FysiodataAPI\FysioterapiMVVM\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\herso\OneDrive\Skrivebord\FysiodataAPI\FysioterapiMVVM\bin\x86\Debug\Medarbejderside.xbf">
+      <PackagePath>Medarbejderside.xbf</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\herso\OneDrive\Skrivebord\FysiodataAPI\FysioterapiMVVM\bin\x86\Debug\Patientside.xbf">
       <PackagePath>Patientside.xbf</PackagePath>
     </AppxPackagedFile>

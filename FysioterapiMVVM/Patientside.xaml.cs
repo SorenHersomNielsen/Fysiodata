@@ -28,5 +28,13 @@ namespace FysioterapiMVVM
             this.InitializeComponent();
             ViewModel = new Viewmodel();
         }
+        private void Forside(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(MainPage));
+        }
+        private void VisMedarbejderside(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Medarbejderside));
+        }
     }
 }

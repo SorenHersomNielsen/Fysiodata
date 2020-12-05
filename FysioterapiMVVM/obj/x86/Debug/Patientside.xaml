@@ -10,38 +10,39 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <ListView x:ConnectionId='2'                                                                                                       Margin="427,118,43,482" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+        <ListView x:ConnectionId='2'                                                                                                       Margin="427,118,43,190" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
             <ListView.RenderTransform>
                 <CompositeTransform Rotation="-0.283"/>
             </ListView.RenderTransform>
             <ListView.ItemTemplate>
                 <DataTemplate                           >
-                    <StackPanel x:ConnectionId='13' Orientation="Horizontal">
-                        <TextBlock x:ConnectionId='14'                                  />
-                        <TextBlock x:ConnectionId='15'                                   />
-                        <TextBlock x:ConnectionId='16'                                   />
-                        <TextBlock x:ConnectionId='17'                                          />
-                        <TextBlock x:ConnectionId='18'                                     />
-                        <TextBlock x:ConnectionId='19'                                   />
+                    <StackPanel x:ConnectionId='15' Orientation="Horizontal">
+                        <TextBlock x:ConnectionId='16'                                  />
+                        <TextBlock x:ConnectionId='17'                                   />
+                        <TextBlock x:ConnectionId='18'                                   />
+                        <TextBlock x:ConnectionId='19'                                          />
+                        <TextBlock x:ConnectionId='20'                                     />
+                        <TextBlock x:ConnectionId='21'                                   />
+                        <TextBlock x:ConnectionId='22'                                   />
                     </StackPanel>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        <TextBox x:ConnectionId='3' HorizontalAlignment="Left" Margin="57,392,0,0" Description="Patients navn"                                                  TextWrapping="Wrap" VerticalAlignment="Top" Height="58" Width="274"/>
-        <TextBox x:ConnectionId='4' HorizontalAlignment="Left" Margin="57,468,0,0" Description="Patients CPRnr."                                                   TextWrapping="Wrap" VerticalAlignment="Top" Height="58" Width="274"/>
-        <TextBox x:ConnectionId='5' HorizontalAlignment="Left" Margin="57,544,0,0" Description="Patients tlfnr."                                                   TextWrapping="Wrap" VerticalAlignment="Top" Height="58" Width="274"/>
-        <TextBox x:ConnectionId='6' HorizontalAlignment="Left" Margin="57,620,0,0" Description="Patients adresse"                                                     TextWrapping="Wrap" VerticalAlignment="Top" Height="58" Width="274"/>
-        <TextBox x:ConnectionId='7' HorizontalAlignment="Left" Margin="57,696,0,0" Description="Patients dianose"                                                                 TextWrapping="Wrap" VerticalAlignment="Top" Height="58" Width="274"/>
-        <TextBox x:ConnectionId='8' HorizontalAlignment="Left" Margin="57,772,0,0" Description="Patients email"                                                   TextWrapping="Wrap" VerticalAlignment="Top" Height="58" Width="274"/>
-        <TextBox x:ConnectionId='9' HorizontalAlignment="Left" Margin="543,819,0,0" Description="Noter om Patieten"                                                         TextWrapping="Wrap" VerticalAlignment="Top" Height="58"/>
-        <Button x:ConnectionId='10'                                                         Content="Tilføj patient" Height="47" Margin="57,853,0,0" VerticalAlignment="Top" Width="110"/>
-        <Button x:ConnectionId='11'                                                           Content="Slet patient" Height="47" Margin="221,853,0,0" VerticalAlignment="Top" Width="110"/>
+        <TextBox x:ConnectionId='3' HorizontalAlignment="Left" Margin="57,242,0,0" Description="Patients navn"                                                  TextWrapping="Wrap" VerticalAlignment="Top" Height="58" Width="274"/>
+        <TextBox x:ConnectionId='4' HorizontalAlignment="Left" Margin="57,326,0,0" Description="Patients CPRnr."                                                   TextWrapping="Wrap" VerticalAlignment="Top" Height="58" Width="274"/>
+        <TextBox x:ConnectionId='5' HorizontalAlignment="Left" Margin="57,406,0,0" Description="Patients tlfnr."                                                   TextWrapping="Wrap" VerticalAlignment="Top" Height="58" Width="274"/>
+        <TextBox x:ConnectionId='6' HorizontalAlignment="Left" Margin="57,485,0,0" Description="Patients adresse"                                                     TextWrapping="Wrap" VerticalAlignment="Top" Height="58" Width="274"/>
+        <TextBox x:ConnectionId='7' HorizontalAlignment="Left" Margin="57,566,0,0" Description="Patients dianose"                                                                 TextWrapping="Wrap" VerticalAlignment="Top" Height="58" Width="274"/>
+        <TextBox x:ConnectionId='8' HorizontalAlignment="Left" Margin="57,644,0,0" Description="Patients email"                                                   TextWrapping="Wrap" VerticalAlignment="Top" Height="58" Width="274"/>
+        <TextBox x:ConnectionId='9' HorizontalAlignment="Left" Margin="57,719,0,0" Description="Noter om Patieten"                                                         TextWrapping="Wrap" VerticalAlignment="Top" Height="191" Width="274"/>
+        <Button x:ConnectionId='10'                                                         Content="Tilføj patient" Height="47" Margin="535,843,0,0" VerticalAlignment="Top" Width="110"/>
+        <Button x:ConnectionId='11'                                                           Content="Slet patient" Height="47" Margin="364,843,0,0" VerticalAlignment="Top" Width="110"/>
 
         <muxc:MenuBar Margin="0,0,0,960">
             <muxc:MenuBarItem Title="File">
-                <MenuFlyoutItem Text="Forside"/>
+                <MenuFlyoutItem x:ConnectionId='12' Text="Forside"                />
                 <MenuFlyoutItem Text="Patient"/>
-                <MenuFlyoutItem Text="Medarbejde" />
+                <MenuFlyoutItem x:ConnectionId='13' Text="Medarbejde"                           />
             </muxc:MenuBarItem>
         </muxc:MenuBar>
     </Grid>

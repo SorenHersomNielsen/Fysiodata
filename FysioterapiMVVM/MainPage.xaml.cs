@@ -32,5 +32,10 @@ namespace FysioterapiMVVM
         {
             this.Frame.Navigate(typeof(Patientside));
         }
+        
+        private void VisMedarbejdeside(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Medarbejderside));
+        }
     }
 }

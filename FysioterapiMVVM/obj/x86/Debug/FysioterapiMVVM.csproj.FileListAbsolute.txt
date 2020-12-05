@@ -53,3 +53,8 @@ C:\Users\herso\OneDrive\Skrivebord\FysiodataAPI\FysioterapiMVVM\obj\x86\Debug\Pa
 C:\Users\herso\OneDrive\Skrivebord\FysiodataAPI\FysioterapiMVVM\obj\x86\Debug\Patientside.g.cs
 C:\Users\herso\OneDrive\Skrivebord\FysiodataAPI\FysioterapiMVVM\obj\x86\Debug\Patientside.xaml
 C:\Users\herso\OneDrive\Skrivebord\FysiodataAPI\FysioterapiMVVM\obj\x86\Debug\Patientside.xbf
+C:\Users\herso\OneDrive\Skrivebord\FysiodataAPI\FysioterapiMVVM\bin\x86\Debug\Medarbejderside.xbf
+C:\Users\herso\OneDrive\Skrivebord\FysiodataAPI\FysioterapiMVVM\obj\x86\Debug\Medarbejderside.g.i.cs
+C:\Users\herso\OneDrive\Skrivebord\FysiodataAPI\FysioterapiMVVM\obj\x86\Debug\Medarbejderside.g.cs
+C:\Users\herso\OneDrive\Skrivebord\FysiodataAPI\FysioterapiMVVM\obj\x86\Debug\Medarbejderside.xaml
+C:\Users\herso\OneDrive\Skrivebord\FysiodataAPI\FysioterapiMVVM\obj\x86\Debug\Medarbejderside.xbf

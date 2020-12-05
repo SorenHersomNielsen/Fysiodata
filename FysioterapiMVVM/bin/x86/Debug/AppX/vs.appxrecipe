@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\herso\OneDrive\Skrivebord\FysiodataAPI\FysioterapiMVVM\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-12-04T16:49:57.304</Modified>
+      <Modified>2020-12-05T19:19:35.985</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\herso\OneDrive\Skrivebord\FysiodataAPI\FysioterapiMVVM\bin\x86\Debug\FysioterapiMVVM.exe">
       <PackagePath>entrypoint\FysioterapiMVVM.exe</PackagePath>
-      <Modified>2020-12-04T16:49:56.352</Modified>
+      <Modified>2020-12-05T19:19:35.068</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\herso\.nuget\packages\microsoft.aspnet.webapi.client\5.2.7\lib\netstandard2.0\System.Net.Http.Formatting.dll">
       <PackagePath>System.Net.Http.Formatting.dll</PackagePath>
@@ -98,19 +98,23 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\herso\OneDrive\Skrivebord\FysiodataAPI\FysioterapiMVVM\bin\x86\Debug\FysioterapiMVVM.xr.xml">
       <PackagePath>FysioterapiMVVM.xr.xml</PackagePath>
-      <Modified>2020-12-02T10:25:48.210</Modified>
+      <Modified>2020-12-05T19:19:34.861</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\herso\OneDrive\Skrivebord\FysiodataAPI\FysioterapiMVVM\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2020-12-04T16:49:56.222</Modified>
+      <Modified>2020-12-05T19:19:34.899</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\herso\OneDrive\Skrivebord\FysiodataAPI\FysioterapiMVVM\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2020-12-04T16:49:56.223</Modified>
+      <Modified>2020-12-05T19:19:34.900</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\herso\OneDrive\Skrivebord\FysiodataAPI\FysioterapiMVVM\bin\x86\Debug\Medarbejderside.xbf">
+      <PackagePath>Medarbejderside.xbf</PackagePath>
+      <Modified>2020-12-05T19:19:34.900</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\herso\OneDrive\Skrivebord\FysiodataAPI\FysioterapiMVVM\bin\x86\Debug\Patientside.xbf">
       <PackagePath>Patientside.xbf</PackagePath>
-      <Modified>2020-12-04T16:49:56.223</Modified>
+      <Modified>2020-12-05T19:19:34.900</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.18362.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -118,11 +122,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\herso\OneDrive\Skrivebord\FysiodataAPI\FysioterapiMVVM\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2020-12-04T16:42:44.816</Modified>
+      <Modified>2020-12-05T19:09:49.552</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\herso\OneDrive\Skrivebord\FysiodataAPI\FysioterapiMVVM\bin\x86\Debug\Core\FysioterapiMVVM.exe">
       <PackagePath>FysioterapiMVVM.exe</PackagePath>
-      <Modified>2020-12-04T16:49:57.294</Modified>
+      <Modified>2020-12-05T19:19:35.968</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
