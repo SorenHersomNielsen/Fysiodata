@@ -128,10 +128,43 @@ namespace FysioterapiMVVM
 
             // Tjekker om patient kan slettes
             SletValgtPatient.RaiseCanExecuteChanged();
+
+            HttpClientHandler handler = new HttpClientHandler();
+            handler.UseDefaultCredentials = true;
+
+            using (var client = new HttpClient(handler))
+            {
+
+                //Initialiser klienten
+                client.BaseAddress = new Uri(URL);
+                client.DefaultRequestHeaders.Clear();
+
+                //Laver en forespøgelse om at få en JSON format
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                try
+                {
+
+                    // sletter den valgt patient fra databasen
+                    var PatientResponse = client.DeleteAsync($"api/Patientstabels/{Cprnr}").Result;
+
+                    //Tjekker svar fra databasen, hvis det går galt kaster den en exception
+                    PatientResponse.EnsureSuccessStatusCode();
+
+                    //Får patient som en ICollection
+                    var patient1 = PatientResponse.Content.ReadAsAsync<Patient>().Result;
+
+                    // Tjekker om patient kan oprettes
+                    SletValgtPatient.RaiseCanExecuteChanged();
+                }
+                catch
+                {
+
+                }
+            }
         }
-        
-        //
-        public void OpretMedarbejde()
+
+            //
+            public void OpretMedarbejde()
         {
             Medarbejde medarbejde = new Medarbejde(Navn, Cprnr, Tlfnr, Adresse, Email);
             Medarbejdeinfo.Add(medarbejde);
@@ -177,6 +210,40 @@ namespace FysioterapiMVVM
             Medarbejdeinfo.Add(medarbejde);
 
             SletValgtMedarbejder.RaiseCanExecuteChanged();
+
+            HttpClientHandler handler = new HttpClientHandler();
+            handler.UseDefaultCredentials = true;
+
+            using (var client = new HttpClient(handler))
+            {
+
+                //Initialiser klienten
+                client.BaseAddress = new Uri(URL);
+                client.DefaultRequestHeaders.Clear();
+
+                //Laver en forespøgelse om at få en JSON format
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                try
+                {
+
+                    // sletter den valgt patient fra databasen
+                    var MedarbejdeResponse
+                        = client.DeleteAsync($"api/Medarbejdetabels/{Cprnr}").Result;
+
+                    //Tjekker svar fra databasen, hvis det går galt kaster den en exception
+                    MedarbejdeResponse.EnsureSuccessStatusCode();
+
+                    //Får patient som en ICollection
+                    var patient1 = MedarbejdeResponse.Content.ReadAsAsync<Medarbejde>().Result;
+
+                    // Tjekker om patient kan oprettes
+                    SletValgtMedarbejder.RaiseCanExecuteChanged();
+                }
+                catch
+                {
+
+                }
+            }
         }
     }
 }
