@@ -12,44 +12,44 @@ using FysiodataAPI;
 
 namespace FysiodataAPI.Controllers
 {
-    public class PatientstabelsController : ApiController
+    public class TræningtabelController : ApiController
     {
-        private Patient db = new Patient();
+        private Træning db = new Træning();
 
-        // GET: api/Patientstabels
-        public IQueryable<Patientstabel> GetPatientstabels()
+        // GET: api/Træningtabel
+        public IQueryable<Træningtabel> GetTræningtabel()
         {
-            return db.Patientstabel;
+            return db.Træningtabel;
         }
 
-        // GET: api/Patientstabels/5
-        [ResponseType(typeof(Patientstabel))]
-        public IHttpActionResult GetPatientstabel(long id)
+        // GET: api/Træningtabel/5
+        [ResponseType(typeof(Træningtabel))]
+        public IHttpActionResult GetTræningtabel(int id)
         {
-            Patientstabel patientstabel = db.Patientstabel.Find(id);
-            if (patientstabel == null)
+            Træningtabel træningtabel = db.Træningtabel.Find(id);
+            if (træningtabel == null)
             {
                 return NotFound();
             }
 
-            return Ok(patientstabel);
+            return Ok(træningtabel);
         }
 
-        // PUT: api/Patientstabels/5
+        // PUT: api/Træningtabel/5
         [ResponseType(typeof(void))]
-        public IHttpActionResult PutPatientstabel(long id, Patientstabel patientstabel)
+        public IHttpActionResult PutTræningtabel(int id, Træningtabel træningtabel)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            if (id != patientstabel.Cprnr)
+            if (id != træningtabel.dato)
             {
                 return BadRequest();
             }
 
-            db.Entry(patientstabel).State = EntityState.Modified;
+            db.Entry(træningtabel).State = EntityState.Modified;
 
             try
             {
@@ -57,7 +57,7 @@ namespace FysiodataAPI.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!PatientstabelExists(id))
+                if (!TræningtabelExists(id))
                 {
                     return NotFound();
                 }
@@ -70,16 +70,16 @@ namespace FysiodataAPI.Controllers
             return StatusCode(HttpStatusCode.NoContent);
         }
 
-        // POST: api/Patientstabels
-        [ResponseType(typeof(Patientstabel))]
-        public IHttpActionResult PostPatientstabel(Patientstabel patientstabel)
+        // POST: api/Træningtabel
+        [ResponseType(typeof(Træningtabel))]
+        public IHttpActionResult PostTræningtabel(Træningtabel træningtabel)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            db.Patientstabel.Add(patientstabel);
+            db.Træningtabel.Add(træningtabel);
 
             try
             {
@@ -87,7 +87,7 @@ namespace FysiodataAPI.Controllers
             }
             catch (DbUpdateException)
             {
-                if (PatientstabelExists(patientstabel.Cprnr))
+                if (TræningtabelExists(træningtabel.dato))
                 {
                     return Conflict();
                 }
@@ -97,23 +97,23 @@ namespace FysiodataAPI.Controllers
                 }
             }
 
-            return CreatedAtRoute("DefaultApi", new { id = patientstabel.Cprnr }, patientstabel);
+            return CreatedAtRoute("DefaultApi", new { id = træningtabel.dato }, træningtabel);
         }
 
-        // DELETE: api/Patientstabels/5
-        [ResponseType(typeof(Patientstabel))]
-        public IHttpActionResult DeletePatientstabel(long id)
+        // DELETE: api/Træningtabel/5
+        [ResponseType(typeof(Træningtabel))]
+        public IHttpActionResult DeleteTræningtabel(int id)
         {
-            Patientstabel patientstabel = db.Patientstabel.Find(id);
-            if (patientstabel == null)
+            Træningtabel træningtabel = db.Træningtabel.Find(id);
+            if (træningtabel == null)
             {
                 return NotFound();
             }
 
-            db.Patientstabel.Remove(patientstabel);
+            db.Træningtabel.Remove(træningtabel);
             db.SaveChanges();
 
-            return Ok(patientstabel);
+            return Ok(træningtabel);
         }
 
         protected override void Dispose(bool disposing)
@@ -125,9 +125,9 @@ namespace FysiodataAPI.Controllers
             base.Dispose(disposing);
         }
 
-        private bool PatientstabelExists(long id)
+        private bool TræningtabelExists(int id)
         {
-            return db.Patientstabel.Count(e => e.Cprnr == id) > 0;
+            return db.Træningtabel.Count(e => e.dato == id) > 0;
         }
     }
 }

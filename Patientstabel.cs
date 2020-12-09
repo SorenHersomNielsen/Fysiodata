@@ -27,12 +27,14 @@ namespace FysiodataAPI
         [StringLength(500)]
         public string email { get; set; }
 
-        [Required]
         [StringLength(500)]
         public string nedsatteevne { get; set; }
 
-        
         [StringLength(500)]
         public string Noter { get; set; }
+
+        public int? MedarbejdeID { get; set; }
+
+        public int? Dato { get; set; }
     }
 }

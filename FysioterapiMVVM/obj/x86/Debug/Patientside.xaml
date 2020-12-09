@@ -29,8 +29,8 @@
             </ListView.ItemTemplate>
         </ListView>
         <TextBox x:ConnectionId='3' HorizontalAlignment="Left" Margin="57,242,0,0" Description="Patients navn"                                                  TextWrapping="Wrap" VerticalAlignment="Top" Height="58" Width="274"/>
-        <TextBox x:ConnectionId='4' HorizontalAlignment="Left" Margin="57,326,0,0" Description="Patients CPRnr."                                                   TextWrapping="Wrap" VerticalAlignment="Top" Height="58" Width="274"/>
-        <TextBox x:ConnectionId='5' HorizontalAlignment="Left" Margin="57,406,0,0" Description="Patients tlfnr."                                                   TextWrapping="Wrap" VerticalAlignment="Top" Height="58" Width="274"/>
+        <TextBox x:ConnectionId='4' HorizontalAlignment="Left" Margin="57,326,0,0" Description="Patients CPRnr."                                                   TextWrapping="Wrap" VerticalAlignment="Top" Height="58" Width="274" MaxLength="10"/>
+        <TextBox x:ConnectionId='5' HorizontalAlignment="Left" Margin="57,406,0,0" Description="Patients tlfnr."                                                   TextWrapping="Wrap" VerticalAlignment="Top" Height="58" Width="274" MaxLength="8"/>
         <TextBox x:ConnectionId='6' HorizontalAlignment="Left" Margin="57,485,0,0" Description="Patients adresse"                                                     TextWrapping="Wrap" VerticalAlignment="Top" Height="58" Width="274"/>
         <TextBox x:ConnectionId='7' HorizontalAlignment="Left" Margin="57,566,0,0" Description="Patients dianose"                                                                 TextWrapping="Wrap" VerticalAlignment="Top" Height="58" Width="274"/>
         <TextBox x:ConnectionId='8' HorizontalAlignment="Left" Margin="57,644,0,0" Description="Patients email"                                                   TextWrapping="Wrap" VerticalAlignment="Top" Height="58" Width="274"/>

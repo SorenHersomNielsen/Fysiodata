@@ -1,19 +1,19 @@
+using System;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Data.Entity;
+using System.Linq;
+
 namespace FysiodataAPI
 {
-    using System;
-    using System.Data.Entity;
-    using System.ComponentModel.DataAnnotations.Schema;
-    using System.Linq;
-
     public partial class Patient : DbContext
     {
         public Patient()
-            : base("name=Patient")
+            : base("name=Patient1")
         {
             base.Configuration.ProxyCreationEnabled = false;
         }
 
-        public virtual DbSet<Patientstabel> Patientstabels { get; set; }
+        public virtual DbSet<Patientstabel> Patientstabel { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
