@@ -11,10 +11,17 @@
 
     <Grid>
         <muxc:MenuBar Margin="0,0,0,960">
-            <muxc:MenuBarItem Title="File">
+            <muxc:MenuBarItem Title="Forside">
                 <MenuFlyoutItem Text="Forside"/>
+            </muxc:MenuBarItem>
+
+            <muxc:MenuBarItem Title="Mennesker">
                 <MenuFlyoutItem Text="Patient" Click="VisPatientside"/>
                 <MenuFlyoutItem Text="Medarbejde" Click="VisMedarbejdeside" />
+            </muxc:MenuBarItem>
+
+            <muxc:MenuBarItem Title="Træning">
+                <MenuFlyoutItem Text="About"/>
             </muxc:MenuBarItem>
         </muxc:MenuBar>
     </Grid>

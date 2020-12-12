@@ -34,15 +34,23 @@
         <TextBox HorizontalAlignment="Left" Margin="57,485,0,0" Description="Patients adresse" Text="{x:Bind Path=ViewModel.Adresse, Mode=TwoWay}" TextWrapping="Wrap" VerticalAlignment="Top" Height="58" Width="274"/>
         <TextBox HorizontalAlignment="Left" Margin="57,566,0,0" Description="Patients dianose" Text="{x:Bind Path=ViewModel.PatientNedsatteevne, Mode=TwoWay}" TextWrapping="Wrap" VerticalAlignment="Top" Height="58" Width="274"/>
         <TextBox HorizontalAlignment="Left" Margin="57,644,0,0" Description="Patients email" Text="{x:Bind Path=ViewModel.Email, Mode=TwoWay}" TextWrapping="Wrap" VerticalAlignment="Top" Height="58" Width="274"/>
-        <TextBox HorizontalAlignment="Left" Margin="57,719,0,0" Description="Noter om Patieten" Text="{x:Bind Path=ViewModel.PatietNoter, Mode=TwoWay}" TextWrapping="Wrap" VerticalAlignment="Top" Height="191" Width="274"/>
+        <TextBox HorizontalAlignment="Left" Margin="57,719,0,0" Description="Noter om Patieten" Text="{x:Bind Path=ViewModel.PatientNoter, Mode=TwoWay}" TextWrapping="Wrap" VerticalAlignment="Top" Height="191" Width="274"/>
         <Button Command="{x:Bind ViewModel.Tilfojepatient,Mode=OneWay}" Content="Tilføj patient" Height="47" Margin="535,843,0,0" VerticalAlignment="Top" Width="110"/>
         <Button Command="{x:Bind ViewModel.SletValgtPatient,Mode=OneWay}" Content="Slet patient" Height="47" Margin="364,843,0,0" VerticalAlignment="Top" Width="110"/>
+        <Button Command="{x:Bind ViewModel.aendrePatient,Mode=OneWay}" Content="Ændre patient" Height="47" Margin="709,843,0,0" VerticalAlignment="Top" Width="110"/>
 
         <muxc:MenuBar Margin="0,0,0,960">
-            <muxc:MenuBarItem Title="File">
+            <muxc:MenuBarItem Title="Forside">
                 <MenuFlyoutItem Text="Forside" Click="Forside"/>
+            </muxc:MenuBarItem>
+
+            <muxc:MenuBarItem Title="Mennesker">
                 <MenuFlyoutItem Text="Patient"/>
-                <MenuFlyoutItem Text="Medarbejde" Click="VisMedarbejderside"/>
+                <MenuFlyoutItem Text="Medarbejde" Click="VisMedarbejdeside" />
+            </muxc:MenuBarItem>
+
+            <muxc:MenuBarItem Title="Træning">
+                <MenuFlyoutItem Text="About"/>
             </muxc:MenuBarItem>
         </muxc:MenuBar>
     </Grid>
